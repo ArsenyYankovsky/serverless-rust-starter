@@ -4,16 +4,17 @@ A simple starter project with Rustlang and Serverless Framework
 
 ✔️ Serverless Framework 2
 
-✔️ Lambda Runtime 0.3.0
+✔️ Typed requests and responses with aws_lambda_events `0.4.0`
 
-✔️ Serverless Rust plugin 0.3.8
+✔️ Lambda Runtime `0.3.0`
 
+✔️ Serverless Rust plugin `0.3.8`
 
 ## Prerequisites
 
 - [Node.js](https://nodejs.org/en/)
 - [Rust](https://www.rust-lang.org/tools/install)
-- [Yarn](https://classic.yarnpkg.com/en/) 
+- [Yarn](https://classic.yarnpkg.com/en/)
 
 ### Setup
 
@@ -33,7 +34,7 @@ yarn && cargo fetch
 
 ### Deploy
 
-To deploy the project just run 
+To deploy the project just run
 
 ```bash
 npx sls deploy

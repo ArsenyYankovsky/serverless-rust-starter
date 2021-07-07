@@ -1,5 +1,6 @@
-use lambda_runtime::{handler_fn, Context};
-use serde_json::Value;
+use aws_lambda_events::encodings::Body;
+use aws_lambda_events::event::apigw::{ApiGatewayProxyRequest, ApiGatewayProxyResponse};
+use lambda_runtime::{Context, handler_fn};
 
 type Error = Box<dyn std::error::Error + Sync + Send + 'static>;
 
@@ -9,6 +10,14 @@ async fn main() -> Result<(), Error> {
     Ok(())
 }
 
-async fn handler(event: Value, _: Context) -> Result<Value, Error> {
-    Ok(event)
+async fn handler(event: ApiGatewayProxyRequest, _: Context) -> Result<ApiGatewayProxyResponse, Error> {
+    Ok(ApiGatewayProxyResponse {
+        status_code: 200,
+        headers: Default::default(),
+        multi_value_headers: Default::default(),
+        body: serde_json::to_string(&event)
+            .ok()
+            .map(|v| Body::Text(v)),
+        is_base64_encoded: None,
+    })
 }
