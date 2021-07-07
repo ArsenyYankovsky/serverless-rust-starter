@@ -1,0 +1,26 @@
+service: rust-sls
+
+frameworkVersion: '2'
+
+provider:
+  name: aws
+  runtime: rust
+plugins:
+  - serverless-rust
+
+custom:
+  rust:
+   dockerless: true
+
+package:
+  individually: true
+functions:
+  test:
+    # handler value syntax is `{cargo-package-name}.{bin-name}`
+    # or `{cargo-package-name}` for short when you are building a
+    # default bin for a given package.
+    handler: rust-sls
+    events:
+      - http:
+          path: /test
+          method: GET
