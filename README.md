@@ -21,9 +21,7 @@ A simple starter project with Rustlang and Serverless Framework
 1. Generate a project
 
 ```bash
-npx serverless install \
-  --url https://github.com/ArsenyYankovsky/serverless-rust-starter \
-  --name my-new-app
+npx serverless install --url https://github.com/ArsenyYankovsky/serverless-rust-starter --name my-new-app
 ```
 
 2. Install dependencies
@@ -39,3 +37,5 @@ To deploy the project just run
 ```bash
 npx sls deploy
 ```
+
+Read [here](https://www.serverless.com/framework/docs/) more on Serverless Framework commands
