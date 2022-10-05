@@ -1,12 +1,13 @@
 # Serverless Rust Starter
 
-A simple starter project with Rust and Serverless Framework
+A simple starter project with Rust and Serverless Framework.
+This starter aims to use the latest versions of Serverless Framework, packages, and crates.
 
-✔️ Serverless Framework 2
+✔️ Serverless Framework 3
 
-✔️ Typed requests and responses with aws_lambda_events `0.5.0`
+✔️ Typed requests and responses with aws_lambda_events `0.6.1`
 
-✔️ Lambda Runtime `0.4.1`
+✔️ Lambda Runtime `0.5.0`
 
 ✔️ Serverless Rust plugin `0.3.8`
 
