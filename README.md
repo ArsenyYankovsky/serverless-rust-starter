@@ -31,6 +31,12 @@ npx serverless install --url https://github.com/ArsenyYankovsky/serverless-rust-
 yarn && cargo fetch
 ```
 
+3. Install target
+
+```bash
+rustup target add x86_64-unknown-linux-musl
+```
+
 ### Deploy
 
 To deploy the project just run
