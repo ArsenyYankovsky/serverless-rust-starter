@@ -5,9 +5,9 @@ This starter aims to use the latest versions of Serverless Framework, packages, 
 
 ✔️ Serverless Framework 3
 
-✔️ Typed requests and responses with aws_lambda_events `0.6.1`
+✔️ Typed requests and responses with aws_lambda_events `0.7.3`
 
-✔️ Lambda Runtime `0.5.0`
+✔️ Lambda Runtime `0.7.3`
 
 ✔️ Serverless Rust plugin `0.3.8`
 
