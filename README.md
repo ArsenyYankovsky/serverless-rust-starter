@@ -5,9 +5,9 @@ This starter aims to use the latest versions of Serverless Framework, packages, 
 
 ✔️ Serverless Framework 3
 
-✔️ Typed requests and responses with aws_lambda_events `0.7.3`
+✔️ Typed requests and responses with aws_lambda_events `0.10.0`
 
-✔️ Lambda Runtime `0.7.3`
+✔️ Lambda Runtime `0.8.1`
 
 ✔️ Serverless Rust plugin `0.3.8`
 
@@ -16,6 +16,8 @@ This starter aims to use the latest versions of Serverless Framework, packages, 
 - [Node.js](https://nodejs.org/en/)
 - [Rust](https://www.rust-lang.org/tools/install)
 - [Yarn](https://classic.yarnpkg.com/en/)
+- [Cargo Lambda](https://www.cargo-lambda.info/)
+- [Zig](https://ziglang.org/)
 
 ### Setup
 
@@ -29,12 +31,6 @@ npx serverless install --url https://github.com/ArsenyYankovsky/serverless-rust-
 
 ```bash
 yarn && cargo fetch
-```
-
-3. Install target
-
-```bash
-rustup target add x86_64-unknown-linux-musl
 ```
 
 ### Deploy

@@ -18,6 +18,6 @@ async fn handler(event: LambdaEvent<ApiGatewayProxyRequest>) -> Result<ApiGatewa
         body: serde_json::to_string(&event.payload)
             .ok()
             .map(|v| Body::Text(v)),
-        is_base64_encoded: None,
+        is_base64_encoded: false,
     })
 }

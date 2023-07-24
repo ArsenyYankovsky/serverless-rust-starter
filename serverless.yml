@@ -4,13 +4,14 @@ frameworkVersion: '3'
 
 provider:
   name: aws
-  runtime: rust
+  runtime: provided.al2
 plugins:
-  - serverless-rust
+  - serverless-rust-plugin
 
 custom:
   rust:
-   dockerless: true
+    cargoLambda:
+      docker: false
 
 package:
   individually: true
@@ -19,8 +20,8 @@ functions:
     # handler value syntax is `{cargo-package-name}.{bin-name}`
     # or `{cargo-package-name}` for short when you are building a
     # default bin for a given package.
-    handler: rust-sls
+    handler: rust-sls.hello
     events:
       - http:
-          path: /test
+          path: /hello
           method: GET
