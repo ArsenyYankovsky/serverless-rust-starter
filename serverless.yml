@@ -16,12 +16,17 @@ custom:
 package:
   individually: true
 functions:
-  test:
+  hello:
     # handler value syntax is `{cargo-package-name}.{bin-name}`
-    # or `{cargo-package-name}` for short when you are building a
-    # default bin for a given package.
     handler: rust-sls.hello
     events:
       - http:
           path: /hello
+          method: GET
+
+  hello2:
+    handler: rust-sls.hello2
+    events:
+      - http:
+          path: /hello2
           method: GET
